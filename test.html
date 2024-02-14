@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ol.css">
+    <style>
+        /* Стили, которые вы хотите применить к обоим "страницам" */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            padding: 20px;  
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="page1" class="container">
+            <img src="https://i.pinimg.com/564x/f7/9f/4c/f79f4c667b646e170d76616b8dba248f.jpg">
+            <h1>Go гулять?</h1>
+            <a href="#" class="btn" onclick="showPage('page2')">💗Можно машинками по твоей попе прокатится, как по горам💗</a>
+  
+        </div>
+
+        <div id="page2" class="container" style="display: none;">
+            <img src="https://i.pinimg.com/564x/d0/aa/dd/d0aadd867f7d57bf13e81a37944ff355.jpg">
+            <h1>Бозее, как мило</h1>
+        </div>
+
+        <p>© 2024 Моя компания. Все права защищены.</p>
+
+        <script>
+            function showPage(pageId) {
+                // Скрываем все страницы
+                var pages = document.querySelectorAll('.container');
+                for (var i = 0; i < pages.length; i++) {
+                    pages[i].style.display = 'none';
+                }
+
+                // Показываем выбранную страницу
+                document.getElementById(pageId).style.display = 'block';
+            }
+
+            function moveButton(event) {
+                var btn = document.getElementById('flyingBtn');
+                // ваш код для перемещения кнопки
+           
+         }
+         
+        </script>
+    </main>
+</body>
+</html>
